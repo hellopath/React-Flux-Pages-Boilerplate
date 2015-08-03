@@ -3,13 +3,13 @@
 A simple pages transition boilerplate using React + Flux
 
 Libs
-– React + Flux + Babel
-– Gulp
-– domquery (for dom manipulation)
-– TweenMax TimelineMax
-– Crossroads + hasher (for the routing)
-– lodash
-– size-element (to grab the width, height of a dom element)
+– React + Flux + Babel<br>
+– Gulp<br>
+– domquery (for dom manipulation)<br>
+– TweenMax TimelineMax<br>
+– Crossroads + hasher (for the routing)<br>
+– lodash<br>
+– size-element (to grab the width, height of a dom element)<br>
 
 ```
 $ bower install
