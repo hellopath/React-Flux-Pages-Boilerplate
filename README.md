@@ -1,8 +1,8 @@
 # React-Flux-TransitionPager
 
-A simple pages transition boilerplate using React + Flux
+A simple pages transition boilerplate using React + Flux<br>
 
-Libs
+Libs<br>
 – React + Flux + Babel<br>
 – Gulp<br>
 – domquery (for dom manipulation)<br>
