@@ -2,7 +2,7 @@
 
 A simple pages transition boilerplate using React + Flux<br>
 
-Libs<br>
+## Libs<br>
 – React + Flux + Babel<br>
 – Gulp<br>
 – domquery (for dom manipulation)<br>
