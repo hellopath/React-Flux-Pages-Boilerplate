@@ -1,0 +1,24 @@
+{
+  "name": "CVY-boilerplate",
+  "version": "0.0.0",
+  "authors": [
+    "hellopath <thomogloupanagiotis@gmail.com>"
+  ],
+  "description": "Boilerplate for a simple paging app",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "components/"
+  ],
+  "dependencies": {
+    "gsap": "~1.17.0",
+    "fastclick": "~1.0.6"
+  },
+  "moduleType": [
+    "node"
+  ]
+}

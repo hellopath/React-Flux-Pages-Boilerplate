@@ -1,0 +1,35 @@
+{
+	"content": {
+		"mytext": "some global text"
+	},
+
+	"menu": [
+		{
+			"id": "work",
+			"name": "Work",
+			"url": "/works"
+		},{
+			"id": "about",
+			"name": "About",
+			"url": "/about"
+		},{
+			"id": "contact",
+			"name": "Contact",
+			"url": "/contact"
+		}
+	],
+
+	"default-route": "/works",
+
+	"routing": {
+		"/works": {
+			"title": "works page",
+		},
+		"/about": {
+			"title": "about page",
+        },
+        "/contact": {
+        	"title": "contact page",
+        }
+	}
+}

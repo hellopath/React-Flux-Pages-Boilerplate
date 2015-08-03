@@ -1,0 +1,12 @@
+@mixin anim2($duration, $delay, $ease, $transform, $originX: 50%, $originY: 50%, $element: all) {
+    @include transition($element, $duration, $ease, $delay);
+    @include transform-origin($originX $originY);
+    @include transform($transform);
+}
+@mixin simpleAnim($duration, $delay, $ease, $element: all) {
+    @include transition($element, $duration, $ease, $delay);
+}
+@mixin globalSlideTransition() {
+    transition: transform .8s $easeInOutQuart;
+}
+

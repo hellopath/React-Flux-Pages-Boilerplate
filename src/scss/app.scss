@@ -1,0 +1,15 @@
+@import "global/_media-queries.scss";
+@import "global/_reset.scss";
+@import "global/_variables.scss";
+@import "global/_easing.scss";
+@import "global/_baseMixins.scss";
+@import "global/_mixins.scss";
+@import "global/_fonts.scss";
+@import "global/_global.scss";
+@import "global/_ui.scss";
+
+@import "layout/_frontcontainer.scss";
+
+@import "pages/_home.scss";
+@import "pages/_about.scss";
+@import "pages/_contact.scss";

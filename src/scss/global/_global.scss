@@ -1,0 +1,55 @@
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: "CircularBook";
+    background-color: $gray;
+}
+
+html {
+    @extend .full;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#app-container  {
+    
+    // font smoothing
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+
+    // disable text-selection & text cursor
+    // @include user-select(none);
+    cursor: default;
+
+    // overall text params
+    font-size: $globalFontSize;
+
+    position: absolute;
+    @extend .full;
+}
+
+#app-template {
+    @extend .full;
+}
+
+#pages-container {
+    position: relative;
+    @extend .full;
+    & > div {
+        @extend .full;
+        position: absolute;
+    }
+}
+
+footer, header {
+    padding: 14px;
+}
+
+.page-wrapper {
+    @extend .full;
+    position: fixed;
+    // padding: 0 $overallMargin;
+    color: $white;
+}
+

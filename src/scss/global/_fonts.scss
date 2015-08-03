@@ -1,0 +1,11 @@
+@include font-face('CircularBook', '../font/circularbook/CircularStd-Book_gdi');
+
+#font-charger {
+	left: -10000px;
+	top: -10000px;
+	position: absolute;
+	@include opacity(0);
+	#CircularBook {
+		font-family: 'CircularBook';
+	}
+}
