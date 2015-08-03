@@ -1,5 +1,5 @@
 {
-  "name": "Panoply-London",
+  "name": "React-Flux-Pages-Boilerplate",
   "version": "1.0.0",
   "description": "Boilerplate for a paging app",
   "main": "src/js/Main.js",
@@ -47,43 +47,30 @@
     "vinyl-transform": "^1.0.0",
     "watchify": "^3.2.2",
     "wiredep": "^2.2.2",
+    "imagemin-pngcrush": "^4.1.0",
     "yargs": "^3.10.0"
   },
   "devDependencies": {
     "by": "^0.2.3",
-    "class-list": "^0.1.1",
-    "common-vimeo": "^1.0.1",
     "crossroads": "^0.12.0",
-    "dom-classes": "0.0.1",
-    "dom-event": "0.0.5",
-    "dom-select": "0.0.0",
-    "dom-style": "0.0.3",
-    "dom-tree": "0.0.1",
     "domquery": "^1.2.0",
     "element-size": "^1.1.1",
     "eventemitter2": "^0.4.14",
     "flux": "^2.0.3",
     "flux-dispatcher": "^1.0.6",
     "hasher": "^1.2.0",
-    "imagemin-pngcrush": "^4.1.0",
-    "imager.jsx": "^1.1.3",
-    "img": "^1.0.0",
     "is": "^3.0.1",
-    "lodash": "^3.9.3",
+    "lodash": "^3.10.0",
     "object-assign": "^3.0.0",
-    "offset": "0.0.1",
     "react": "^0.13.3",
     "react-mixin": "^1.4.0",
     "reactify": "^1.1.1",
     "require-globify": "^1.2.1",
-    "siblings": "^1.0.1",
-    "svg-create-element": "^1.0.0",
-    "wheel": "git+https://git@github.com/hellopath/wheel.git",
-    "wheel-inertia": "0.0.1"
+    "siblings": "^1.0.1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hellopath/Panoply-London.git"
+    "url": "git+https://github.com/hellopath/React-Flux-Pages-Boilerplate.git"
   },
   "keywords": [
     "convoy",
@@ -93,7 +80,7 @@
   "author": "Panagiotis THOMOGLOU <contact@pa-th.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/hellopath/Panoply-London/issues"
+    "url": "https://github.com/hellopath/React-Flux-Pages-Boilerplate/issues"
   },
-  "homepage": "https://github.com/hellopath/Panoply-London#readme"
+  "homepage": "https://github.com/hellopath/React-Flux-Pages-Boilerplate#readme"
 }

@@ -22,10 +22,8 @@ class Router {
 	_setupCrossroads() {
 		var basicSection = crossroads.addRoute('{page}', this._onFirstDegreeURLHandler.bind(this), 3)
 		basicSection.rules = {
-	        page : ['about', 'blog', 'works', 'contact'] //valid sections
+	        page : ['about', 'works', 'contact'] //valid sections
 	    }
-		crossroads.addRoute('/works/{id}', this._onWorksURLHandler.bind(this), 2)
-		crossroads.addRoute('/blog/posts/{id}', this._onBlogPostURLHandler.bind(this), 1)
 	}
 	_onFirstDegreeURLHandler(pageId) {
 		this._assignRoute(pageId)
