@@ -44,6 +44,8 @@
  *                                - content:   Animation css
  *    -   animation               - arguments: name duration timing-function delay iteration-count direction fill-mode play-state
                                              (http://www.w3schools.com/cssref/css3_pr_animation.asp)
+ *    -  simpleAnim               - arguments: Duration, Delay, ease, element: all
+ *    -  anim                     - arguments: Duration, Delay, ease, transform, originX: 50%, originY: 50%, element: all
  *-------------------------------------------------------------*/
 
 @function str-replace($string, $search, $replace: "") {
@@ -285,4 +287,15 @@
     width:auto !important; 
     width: $value; 
     max-width: $value; 
+}
+@mixin simpleAnim($duration, $delay, $ease, $element: all) {
+    transition-property: $element;
+    transition-duration: $duration;
+    transition-timing-function: $ease;
+    transition-delay: $delay;
+}
+@mixin anim($duration, $delay, $ease, $transform, $originX: 50%, $originY: 50%, $element: all) {
+    @include simpleAnim($duration, $delay, $ease, $element);
+    @include transform-origin($originX $originY);
+    @include transform($transform);
 }

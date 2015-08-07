@@ -5,10 +5,7 @@ class GlobalEvents {
 		window.addEventListener('resize', this.resize)
 	}
 	resize() {
-		clearTimeout(this.resizeTimeout)
-		this.resizeTimeout = setTimeout(()=>{
-			AppActions.windowResize(window.innerWidth, window.innerHeight)
-		}, 300)
+		AppActions.windowResize(window.innerWidth, window.innerHeight)
 	}
 }
 

@@ -24,6 +24,12 @@ function _getDefaultRoute() {
 function _getGlobalContent() {
     return data.content
 }
+function _windowWidthHeight() {
+    return {
+        w: window.innerWidth,
+        h: window.innerHeight
+    }
+}
 
 var AppStore = assign({}, EventEmitter2.prototype, {
     emitChange: function(type, item) {
@@ -44,10 +50,10 @@ var AppStore = assign({}, EventEmitter2.prototype, {
     globalContent: function() {
         return _getGlobalContent()
     },
-    Window: {
-        w: window.innerWidth,
-        h: window.innerHeight
+    Window: function() {
+        return _windowWidthHeight()
     },
+    Orientation: AppConstants.LANDSCAPE,
     dispatcherIndex: AppDispatcher.register(function(payload){
         var action = payload.action
         switch(action.actionType) {
@@ -58,6 +64,7 @@ var AppStore = assign({}, EventEmitter2.prototype, {
             case AppConstants.WINDOW_RESIZE:
                 AppStore.Window.w = action.item.windowW
                 AppStore.Window.h = action.item.windowH
+                AppStore.Orientation = (AppStore.Window.w > AppStore.Window.h) ? AppConstants.LANDSCAPE : AppConstants.PORTRAIT
                 AppStore.emitChange(action.actionType)
                 break
         }
