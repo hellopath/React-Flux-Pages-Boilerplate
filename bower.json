@@ -15,8 +15,7 @@
     "components/"
   ],
   "dependencies": {
-    "gsap": "~1.17.0",
-    "fastclick": "~1.0.6"
+    "gsap": "~1.17.0"
   },
   "moduleType": [
     "node"

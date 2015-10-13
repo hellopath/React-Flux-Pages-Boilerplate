@@ -16,7 +16,7 @@ class App {
 		// Init global events
 		window.GlobalEvents = new GEvents()
 		GlobalEvents.init()
-		
+
 		// Render react
 		React.render(
 			<AppTemplate />,

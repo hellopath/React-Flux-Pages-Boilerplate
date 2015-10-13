@@ -13,6 +13,7 @@ var notify = require('gulp-notify')
 var uglify = require('gulp-uglify')
 var gulpsync = require('gulp-sync')(gulp)
 var imagemin = require('gulp-imagemin')
+var gcallback = require('gulp-callback')
 var sourcemaps = require('gulp-sourcemaps')
 var postcss = require('gulp-postcss')
 var bundle = require('gulp-bundle-assets')
@@ -153,7 +154,9 @@ var tasks = {
                 .pipe(gulpif(production, buffer()))
                 .pipe(gulpif(production, uglify()))
                 .pipe(gulp.dest('./www/js'))
-                .pipe(browserSync.stream())
+                .pipe(gcallback(function() {
+                    browserSync.reload()
+                }));
         }
         
         return rebundle();
@@ -265,16 +268,11 @@ gulp.task('reload', function() {
 gulp.task('reload-sass', ['sass'], function(){
     browserSync.reload();
 });
-gulp.task('watch-js', [
-    'clearJs',
-    'browserify',
-    'reload'
-])
 
 bundler.on('update', function() {
     tasks.browserify()
-    browserSync.reload()
 });
+
 // bundler.on('log', function(msg) {
 //     console.log(msg)
 // });
@@ -284,7 +282,6 @@ gulp.task('reload-templates', [], function(){
 
 gulp.task('watch', function() {
     gulp.watch('./src/scss/**/*.scss', ['reload-sass']);
-    // gulp.watch('./src/js/**/*.js', ['watch-js']);
     gulp.watch('./www/**/*.html', ['reload-templates']);
     gutil.log(gutil.colors.bgRed('Watching for changes...'));
 });
